@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>satknowledge index</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rwd.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <!-- logo，連回首葉 -->
+        <div class="logo">
+            <a href="index.html">
+                <img src="image/logopadmobile.png" alt="Logo">
+            </a>
+        </div>
+        <!-- 左邊導覽列:分類與企業 -->
+        <div class="navleft">
+            <div class="dropdown">
+                <a href="#" class="dropbtn">課程<i class="fa-solid fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <div class="dropdown-submenu">
+                        <a href="#">領域分類</a>
+                        <div class="dropdown-submenu-content">
+                            <div class="dropdown-thirdmenu">
+                                <a href="#">語言</a>
+                                <div class="dropdown-thirdmenu-content">
+                                    <a href="#">英語</a>
+                                    <a href="#">日語</a>
+                                    <a href="#">越南語</a>
+                                    <a href="#">古典文學</a>
+                                </div>
+                            </div>
+                            <a href="#">音樂歌唱</a>
+                            <a href="#">藝術</a>
+                            <a href="#">生活</a>
+                            <a href="#">職場技能</a>
+                            <a href="#">投資理財</a>
+                            <a href="#">設計創作</a>
+                            <a href="#">親子</a>
+                            <a href="#">命理</a>
+                            <a href="#">身心健康</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="#">課程類型</a>
+                        <div class="dropdown-submenu-content">
+                            <a href="#">即將開賣</a>
+                            <a href="#">募資中</a>
+                            <a href="#">限時優惠中</a>
+                            <a href="#">即將開課</a>
+                            <a href="#">已開課</a>
+                            <a href="#">全部</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">企業專區</a>
+        </div>
+        
+        <!-- 中間導覽列:搜尋 -->
+        <div class="searchbar">
+            <input type="text" placeholder="搜尋課程、講師..." onfocus="showDropdown()" onblur="hideDropdown()">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <div class="search-dropdown" id="searchDropdown">
+                <div class="search-section">
+                    <div class="section-title">歷史搜尋</div>
+                    <a href="#"><i class="fa-regular fa-clock"></i> 職場進修</a>
+                    <a href="#"><i class="fa-regular fa-clock"></i> 簡報</a>
+                    <a href="#"><i class="fa-regular fa-user"></i> 葉丙成</a>
+                </div>
+                <div class="search-section">
+                    <div class="section-title">大家都在搜</div>
+                    <a href="#"><i class="fa-solid fa-fire"></i> 了解自己</a>
+                    <a href="#"><i class="fa-solid fa-fire"></i> 占星</a>
+                    <a href="#"><i class="fa-solid fa-fire"></i> 投資理財</a>
+                </div>
+                <div class="search-section">
+                    <div class="section-title">推薦課程</div>
+                    <a href="#"><i class="fa-regular fa-thumbs-up"></i> 專業經理人組合包：職場團隊領導力與致勝談判思維學</a>
+                    <a href="#"><i class="fa-regular fa-thumbs-up"></i> 探索自我組合：人類圖實踐 X 白瑜占星學，引導自我</a>
+                    <a href="#"><i class="fa-regular fa-thumbs-up"></i> 掌握口語表達與舞台魅力｜葉丙成的簡報必修課</a>
+                </div>
+                <div class="search-section trending-section">
+                    <div class="section-title">熱門標籤</div>
+                    <div class="trending-tags">
+                        <a href="#">#課程1+1更划算</a>
+                        <a href="#">#獨家大師課</a>
+                        <a href="#">#身心靈</a>
+                        <a href="#">#投資理財</a>
+                        <a href="#">#英文</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 右邊導覽列：購買與註冊登入 -->
+        <div class="navright">
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#" class="login">登入</a>
+            <a href="#" class="register">註冊</a>
+            <a href="#" class="hamburger-menu"><i class="fa-solid fa-bars"></i></a>
+        </div>
+    </header>
+    <!-- rwd用 -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#">探索課程</a>
+        <a href="#">企業專區</a>
+        <a href="#">登入</a>
+        <a href="#">註冊</a>
+    </div>
+
+    <!-- kvimage carousel -->
+    <div class="carousel">
+        <div class="carousel-container" id="carouselContainer">
+            <div class="carousel-slide">
+                <img src="image/keyimage1.png" alt="Slide 1">
+                <div class="carousel-caption">90天理財關鍵行動｜儲蓄陪跑課</div>
+            </div>
+            <div class="carousel-slide">
+                <img src="image/keyimage2.png" alt="Slide 2">
+                <div class="carousel-caption">產品思維養成術｜從觀念到實踐，矽谷產品經理帶你掌握產品全貌觀</div>
+            </div>
+            <div class="carousel-slide">
+                <img src="image/keyimage3.png" alt="Slide 3">
+                <div class="carousel-caption">黃瑽寧醫師的科學育兒法｜0-12 歲育兒全百科</div>
+            </div>
+            <div class="carousel-slide">
+                <img src="image/keyimage4.png" alt="Slide 3">
+                <div class="carousel-caption">歌手的老師帶你唱好主打歌！歌唱技巧訓練全指南</div>
+            </div>
+            <div class="carousel-slide">
+                <img src="image/keyimage5.png" alt="Slide 3">
+                <div class="carousel-caption">峰值體驗2｜關鍵時刻的洞察與落地</div>
+            </div>
+        </div>
+        <div class="carousel-indicators">
+            <span class="indicator" onclick="currentSlide(1)"></span>
+            <span class="indicator" onclick="currentSlide(2)"></span>
+            <span class="indicator" onclick="currentSlide(3)"></span>
+            <span class="indicator" onclick="currentSlide(4)"></span>
+            <span class="indicator" onclick="currentSlide(5)"></span>
+        </div>
+    </div>
+
+    <!-- course card 合購專區 -->
+    <div class="course-section">
+        <div class="title">
+            <h1>合購專區</h1>
+            <h2>適合你的課程1+1</h2>
+        </div>
+        <div class="title-decor"></div>
+        <div class="course-slider">
+            <button class="prev" onclick="slide(-1, '合購專區')"><i class="fa-solid fa-circle-left"></i></button>
+            <div class="course-container" id="合購專區">
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/mixclass1.png" alt="">
+                    <div class="course-info">
+                        <h3>韓國熱門組合包：個人色彩鑑定課 X MBTI應用說明</h3>
+                        <div class="money">
+                            <span>NT$ 24,000</span>
+                            <span>NT$ 24,800</span>
+                        </div>
+                        <div class="remark">
+                            <span>合購優惠</span>
+                            <a href="#" class="tag">#韓國</a>
+                            <a href="#" class="tag">#色彩學</a>
+                            <a href="#" class="tag">#MBTI</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/mixclass2.png" alt="">
+                    <div class="course-info">
+                        <h3>探索自我組合包：人類圖實踐 X 白瑜占星學，做自我的引導師</h3>
+                        <div class="money">
+                            <span>NT$ 20,000</span>
+                            <span>NT$ 20,800</span>
+                        </div>
+                        <div class="remark">
+                            <span>合購優惠</span>
+                            <a href="#" class="tag">#探索自我</a>
+                            <a href="#" class="tag">#人類圖</a>
+                            <a href="#" class="tag">#占星</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/mixclass3.png" alt="">
+                    <div class="course-info">
+                        <h3>父母教育組合包：打造創新教養觀 X 正念溝通，陪孩子健康成長</h3>
+                        <div class="money">
+                            <span>NT$ 18,800</span>
+                            <span>NT$ 19,800</span>
+                        </div>
+                        <div class="remark">
+                            <span>合購優惠</span>
+                            <a href="#" class="tag">#親子教育</a>
+                            <a href="#" class="tag">#正念溝通</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/mixclass4.png" alt="">
+                    <div class="course-info">
+                        <h3>創作強化組合包：百萬流量經營 X 內容創造，從零打造自媒體</h3>
+                        <div class="money">
+                            <span>NT$ 19,550</span>
+                            <span>NT$ 20,400</span>
+                        </div>
+                        <div class="remark">
+                            <span>合購優惠</span>
+                            <a href="#" class="tag">#自媒體</a>
+                            <a href="#" class="tag">#YouTuber</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/mixclass5.png" alt="">
+                    <div class="course-info">
+                        <h3>專業經理人組合包：職場團隊領導力與致勝談判思維學</h3>
+                        <div class="money">
+                            <span>NT$ 20,000</span>
+                            <span>NT$ 20,800</span>
+                        </div>
+                        <div class="remark">
+                            <span>合購優惠</span>
+                            <a href="#" class="tag">#職場技能</a>
+                            <a href="#" class="tag">#領導力</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="next" onclick="slide(1, '合購專區')"><i class="fa-solid fa-circle-right"></i></button>
+        </div>
+    </div>
+<!-- 123 -->
+
+    <!-- course card 獨家大師 -->
+    <div class="course-section">
+        <div class="title">
+            <h1>獨家大師</h1>
+            <h2>大師精品課</h2>
+        </div>
+        <div class="title-decor"></div>
+        <div class="course-slider">
+            <button class="prev" onclick="slide(-1, '獨家大師')"><i class="fa-solid fa-circle-left"></i></button>
+            <div class="course-container" id="獨家大師">
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/master1.png" alt="">
+                    <div class="course-info">
+                        <h3>峰值體驗2｜關鍵時刻的洞察與落地</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>汪志謙</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>4,906人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 11,100</span>
+                            <span>NT$ 17,900</span>
+                        </div>
+                        <div class="remark">
+                            <span>限時優惠中</span>
+                            <a href="#" class="tag">#職場技能</a>
+                            <a href="#" class="tag">#領導力</a>
+                            <a href="#" class="tag">#談判</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/master2.png" alt="">
+                    <div class="course-info">
+                        <h3>掌握口語表達與舞台魅力｜葉丙成的簡報必修課</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>葉丙成 Benson</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>17,176人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 10,200</span>
+                            <span>NT$ 12,000</span>
+                        </div>
+                        <div class="remark">
+                            <span>限時優惠中</span>
+                            <a href="#" class="tag">#職場技能</a>
+                            <a href="#" class="tag">#簡報</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/master3.png" alt="">
+                    <div class="course-info">
+                        <h3>風林火山｜劉必榮的致勝談判思維課</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>劉必榮</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>2,653人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 19,960</span>
+                            <span>NT$ 21,560</span>
+                        </div>
+                        <div class="remark">
+                            <span>限時優惠中</span>
+                            <a href="#" class="tag">#談判</a>
+                            <a href="#" class="tag">#思維</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/master4.png" alt="">
+                    <div class="course-info">
+                        <h3>超級數字力｜一生受用的財務思維課</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>MJ 林明樟</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>22,566人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 13,430</span>
+                        </div>
+                        <div class="remark">
+                            <a href="#" class="tag">#理財</a>
+                            <a href="#" class="tag">#財務</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/master5.png" alt="">
+                    <div class="course-info">
+                        <h3>劉必榮的國際關係課｜七大框架，拓展全局視野</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>劉必榮</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>2,129人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 12,000</span>
+                        </div>
+                        <div class="remark">
+                            <a href="#" class="tag">#金融</a>
+                            <a href="#" class="tag">#思維</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="next" onclick="slide(1, '獨家大師')"><i class="fa-solid fa-circle-right"></i></button>
+        </div>
+    </div>
+
+    <!-- course card 募資課程 -->
+    <div class="course-section">
+        <div class="title">
+            <h1>募資課程</h1>
+            <h2>早鳥優惠倒數</h2>
+        </div>
+        <div class="title-decor"></div>
+        <div class="course-slider">
+            <button class="prev" id="prevButton" onclick="slide(-1, '募資課程')"><i class="fa-solid fa-circle-left"></i></button>
+            <div class="course-container" id="募資課程">
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/money1.png" alt="">
+                    <div class="course-info">
+                        <h3>90天理財關鍵行動｜儲蓄陪跑課</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>SHIN LI 李勛</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 2,740</span>
+                            <span>NT$ 9,800</span>
+                        </div>
+                        <div class="remark-progress">
+                            <div class="remark">
+                                <span>6/2早鳥優惠開賣</span>
+                            </div>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 0%;"></div>
+                                </div>
+                                <div class="progress-details">
+                                    <span class="progress-text">募資即將開始</span>
+                                    <span class="progress-percentage">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/money2.png" alt="">
+                    <div class="course-info">
+                        <h3>SEO 排名攻略學：從產業分析到落地實戰，創造翻倍流量</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>Frank 邱韜誠</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 4,100</span>
+                            <span>NT$ 9,800</span>
+                        </div>
+                        <div class="remark-progress">
+                            <div class="remark">
+                                <span>早鳥優惠倒數2天</span>
+                            </div>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 100%;"></div>
+                                </div>
+                                <div class="progress-details">
+                                    <span class="progress-text">募資成功 即將開課</span>
+                                    <span class="progress-percentage">5583%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/money3.png" alt="">
+                    <div class="course-info">
+                        <h3>產品思維養成術｜從觀念到實踐，矽谷產品經理帶你掌握產品</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>Chloe Shih 石子芸</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 3,850</span>
+                            <span>NT$ 11,000</span>
+                        </div>
+                        <div class="remark-progress">
+                            <div class="remark">
+                                <span>早鳥優惠倒數2天</span>
+                            </div>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 100%;"></div>
+                                </div>
+                                <div class="progress-details">
+                                    <span class="progress-text">募資成功 即將開課</span>
+                                    <span class="progress-percentage">11999%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/money4.png" alt="">
+                    <div class="course-info">
+                        <h3>歌手的老師帶你唱好主打歌！歌唱技巧訓練全指南</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>陳威宇</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 3,630</span>
+                            <span>NT$ 11,000</span>
+                        </div>
+                        <div class="remark-progress">
+                            <div class="remark">
+                                <span>早鳥優惠倒數2天</span>
+                            </div>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 100%;"></div>
+                                </div>
+                                <div class="progress-details">
+                                    <span class="progress-text">募資成功 即將開課</span>
+                                    <span class="progress-percentage">8992%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/money5.png" alt="">
+                    <div class="course-info">
+                        <h3>黃瑽寧醫師的科學育兒法｜0-12 歲育兒全百科</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>黃瑽寧</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 3,900</span>
+                            <span>NT$ 12,200</span>
+                        </div>
+                        <div class="remark-progress">
+                            <div class="remark">
+                                <span>早鳥優惠倒數2天</span>
+                            </div>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 100%;"></div>
+                                </div>
+                                <div class="progress-details">
+                                    <span class="progress-text">募資成功 即將開課</span>
+                                    <span class="progress-percentage">30457%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="next" id="nextButton" onclick="slide(1, '募資課程')"><i class="fa-solid fa-circle-right"></i></button>
+        </div>
+    </div>
+
+    <!-- course card 熱門課程 -->
+    <div class="course-section">
+        <div class="title">
+            <h1>熱門課程</h1>
+            <h2>大家都在學</h2>
+        </div>
+        <div class="title-decor"></div>
+        <div class="course-slider">
+            <button class="prev" onclick="slide(-1, '熱門課程')"><i class="fa-solid fa-circle-left"></i></button>
+            <div class="course-container" id="熱門課程">
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/hot1.png" alt="">
+                    <div class="course-info">
+                        <h3>星盤解讀•感情合盤•運勢決策｜白瑜的全方位占星學</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>白瑜</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>23,563人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 11,000</span>
+                        </div>
+                        <div class="remark">
+                            <a href="#" class="tag">#探索自我</a>
+                            <a href="#" class="tag">#占星</a>
+                            <a href="#" class="tag">#命理</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/hot2.png" alt="">
+                    <div class="course-info">
+                        <h3>從「流量經營」到「熱銷熱賣」｜愛莉莎莎的自媒體銷售學</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>愛莉莎莎</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>27,074人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 11,500</span>
+                        </div>
+                        <div class="remark">
+                            <a href="#" class="tag">#行銷</a>
+                            <a href="#" class="tag">#企劃</a>
+                            <a href="#" class="tag">#自媒體</a>
+                            <a href="#" class="tag">#YouTuber</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/hot3.png" alt="">
+                    <div class="course-info">
+                        <h3>複利引擎｜陳重銘的沉穩獲利全指南</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>陳重銘</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>9,094</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 13,800</span>
+                        </div>
+                        <div class="remark">
+                            <a href="#" class="tag">#金融投資</a>
+                            <a href="#" class="tag">#理財</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/hot4.png" alt="">
+                    <div class="course-info">
+                        <h3>做自己的人生引導師！路嘉怡的人類圖生活實踐課</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>路嘉怡</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>7,759人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 9,800</span>
+                        </div>
+                        <div class="remark">
+                            <a href="#" class="tag">#身心靈</a>
+                            <a href="#" class="tag">#人類圖</a>
+                            <a href="#" class="tag">#命理</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/hot5.png" alt="">
+                    <div class="course-info">
+                        <h3>超級數字力｜一生受用的財務思維課</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>MJ 林明樟</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>22,566人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 13,430</span>
+                            <span>NT$ 15,800</span>
+                        </div>
+                        <div class="remark">
+                            <span>限時優惠中</span>
+                            <a href="#" class="tag">#理財</a>
+                            <a href="#" class="tag">#財務</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="next" onclick="slide(1, '熱門課程')"><i class="fa-solid fa-circle-right"></i></button>
+        </div>
+    </div>
+
+    <!-- course card 身心健康 -->
+    <div class="course-section">
+        <div class="title">
+            <h1>身心健康</h1>
+            <h2>維持心靈富足</h2>
+        </div>
+        <div class="title-decor"></div>
+        <div class="course-slider">
+            <button class="prev" onclick="slide(-1, '身心健康')"><i class="fa-solid fa-circle-left"></i></button>
+            <div class="course-container" id="身心健康">
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/health1.png" alt="">
+                    <div class="course-info">
+                        <h3>從人生決策到創造好運｜簡少年的現代命運設計課</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>簡少年</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>8,648人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 9,800</span>
+                        </div>
+                        <div class="remark">
+                            <a href="#" class="tag">#身心靈</a>
+                            <a href="#" class="tag">#紫微</a>
+                            <a href="#" class="tag">#命理</a>
+                            <a href="#" class="tag">#YouTuber</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/health2.png" alt="">
+                    <div class="course-info">
+                        <h3>情緒Ｘ溝通Ｘ人際經營｜周慕姿的全方位關係應用課</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>周慕姿</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>7,759人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 9,800</span>
+                        </div>
+                        <div class="remark">
+                            <a href="#" class="tag">#身心靈</a>
+                            <a href="#" class="tag">#人際關係</a>
+                            <a href="#" class="tag">#溝通</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/health3.png" alt="">
+                    <div class="course-info">
+                        <h3>心念自癒｜許瑞云＆鄭先安醫師身心靈自我療癒課</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>許瑞云 鄭先安醫師</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>4,177人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 12,800</span>
+                        </div>
+                        <div class="remark">
+                            <a href="#" class="tag">#身心靈</a>
+                            <a href="#" class="tag">#心念</a>
+                            <a href="#" class="tag">#療癒</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/health4.png" alt="">
+                    <div class="course-info">
+                        <h3>星盤解讀•感情合盤•運勢決策｜白瑜的全方位占星學</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>白瑜</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>23,563人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 11,000</span>
+                        </div>
+                        <div class="remark">
+                            <a href="#" class="tag">#探索自我</a>
+                            <a href="#" class="tag">#占星</a>
+                            <a href="#" class="tag">#命理</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/health5.png" alt="">
+                    <div class="course-info">
+                        <h3>做自己的人生引導師！路嘉怡的人類圖生活實踐課</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>路嘉怡</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>7,759人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 9,800</span>
+                        </div>
+                        <div class="remark">
+                            <a href="#" class="tag">#身心靈</a>
+                            <a href="#" class="tag">#人類圖</a>
+                            <a href="#" class="tag">#命理</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="next" onclick="slide(1, '身心健康')"><i class="fa-solid fa-circle-right"></i></button>
+        </div>
+    </div>
+
+    <!-- course card 領域菁英 -->
+    <div class="course-section">
+        <div class="title">
+            <h1>領域菁英</h1>
+            <h2>提升職場競爭力</h2>
+        </div>
+        <div class="title-decor"></div>
+        <div class="course-slider">
+            <button class="prev" onclick="slide(-1, '領域菁英')"><i class="fa-solid fa-circle-left"></i></button>
+            <div class="course-container" id="領域菁英">
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/business1.png" alt="">
+                    <div class="course-info">
+                        <h3>創新商業思維實戰｜帶你發現問題、解決問題、創造商機</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>陶韻智＆葉丙成</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>4,694人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 9,800</span>
+                        </div>
+                        <div class="remark">
+                            <a href="#" class="tag">#職場技能</a>
+                            <a href="#" class="tag">#商業</a>
+                            <a href="#" class="tag">#思維</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/business2.png" alt="">
+                    <div class="course-info">
+                        <h3>艾蜜莉的穩健存股投資法｜台股 x 美股 x ETF x 退休現金流</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>艾蜜莉</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>4,719人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 12,800</span>
+                        </div>
+                        <div class="remark">
+                            <a href="#" class="tag">#金融投資</a>
+                            <a href="#" class="tag">#理財</a>
+                            <a href="#" class="tag">#存股</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/business4.png" alt="">
+                    <div class="course-info">
+                        <h3>孫子兵法｜不戰而勝的策略思維課</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>劉必榮</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>9,016人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 5,400</span>
+                            <span>NT$ 12,000</span>
+                        </div>
+                        <div class="remark">
+                            <span>限時優惠中</span>
+                            <a href="#" class="tag">#金融投資</a>
+                            <a href="#" class="tag">#理財</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/business5.png" alt="">
+                    <div class="course-info">
+                        <h3>掌握口語表達與舞台魅力｜葉丙成的簡報必修課</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>葉丙成 Benson</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>17,176人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 10,200</span>
+                            <span>NT$ 12,000</span>
+                        </div>
+                        <div class="remark">
+                            <span>限時優惠中</span>
+                            <a href="#" class="tag">#職場技能</a>
+                            <a href="#" class="tag">#簡報</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/business6.png" alt="">
+                    <div class="course-info">
+                        <h3>風林火山｜劉必榮的致勝談判思維課</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>劉必榮</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>2,609人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 16,567</span>
+                            <span>NT$ 19,962</span>
+                        </div>
+                        <div class="remark">
+                            <span>限時優惠中</span>
+                            <a href="#" class="tag">#談判</a>
+                            <a href="#" class="tag">#思維</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/business7.png" alt="">
+                    <div class="course-info">
+                        <h3>分析師的總經應用學｜全球經濟運行看見投資機會</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>股乾爹 Sean</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>9,016人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 5,400</span>
+                            <span>NT$ 12,000</span>
+                        </div>
+                        <div class="remark">
+                            <span>限時優惠中</span>
+                            <a href="#" class="tag">#金融投資</a>
+                            <a href="#" class="tag">#理財</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="next" onclick="slide(1, '領域菁英')"><i class="fa-solid fa-circle-right"></i></button>
+        </div>
+    </div>
+
+    <!-- course card 生活興趣 -->
+    <div class="course-section">
+        <div class="title">
+            <h1>生活興趣</h1>
+            <h2>發掘個人興趣</h2>
+        </div>
+        <div class="title-decor"></div>
+        <div class="course-slider">
+            <button class="prev" onclick="slide(-1, '生活興趣')"><i class="fa-solid fa-circle-left"></i></button>
+            <div class="course-container" id="生活興趣">
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/life1.png" alt="">
+                    <div class="course-info">
+                        <h3>Procreate 21 天生活繪畫跟練課</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>KIMU</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>8,060人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 5,000</span>
+                        </div>
+                        <div class="remark">
+                            <a href="#" class="tag">#繪畫</a>
+                            <a href="#" class="tag">#Procreate</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/life2.png" alt="">
+                    <div class="course-info">
+                        <h3>全方位形象打造｜韓國個人色彩鑑定課</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>김지은 金智垠</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>2,973人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 9,800</span>
+                        </div>
+                        <div class="remark">
+                            <a href="#" class="tag">#了解自己</a>
+                            <a href="#" class="tag">#個人形象</a>
+                            <a href="#" class="tag">#色彩學</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/life3.png" alt="">
+                    <div class="course-info">
+                        <h3>實現最完整的自己｜雪力的 MBTI 全方位應用說明書</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>雪力（夏瑄澧）</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>3,972</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 13,800</span>
+                        </div>
+                        <div class="remark">
+                            <a href="#" class="tag">#了解自己</a>
+                            <a href="#" class="tag">#個人形象</a>
+                            <a href="#" class="tag">#MBTI</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/life4.png" alt="">
+                    <div class="course-info">
+                        <h3>無痛居家整理學｜破除復亂困境，營造質感空間</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>Phyllis</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>4,419人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 5,150</span>
+                            <span>NT$ 9,800</span>
+                        </div>
+                        <div class="remark">
+                            <span>限時優惠中</span>
+                            <a href="#" class="tag">#整理術</a>
+                            <a href="#" class="tag">#斷捨離</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/life5.png" alt="">
+                    <div class="course-info">
+                        <h3>培仁媽媽的暖心家常菜｜用簡單食材，煮出豐富的蔬食料理</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>培仁媽媽</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>1,547人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 10,200</span>
+                            <span>NT$ 9,800</span>
+                        </div>
+                        <div class="remark">
+                            <span>限時優惠中</span>
+                            <a href="#" class="tag">#烹飪料理</a>
+                            <a href="#" class="tag">#家常菜</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="next" onclick="slide(1, '生活興趣')"><i class="fa-solid fa-circle-right"></i></button>
+        </div>
+    </div>
+
+    <!-- course card 限時優惠 -->
+    <div class="course-section">
+        <div class="title">
+            <h1>限時優惠</h1>
+            <h2>把握最後優惠價</h2>
+        </div>
+        <div class="title-decor"></div>
+        <div class="course-slider">
+            <button class="prev" onclick="slide(-1, '限時優惠')"><i class="fa-solid fa-circle-left"></i></button>
+            <div class="course-container" id="限時優惠">
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/discount1.png" alt="">
+                    <div class="course-info">
+                        <h3>全方位社群美照養成術｜拍出喜歡的生活樣貌</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>小喵 陳語瑄</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>7,341人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 5,200</span>
+                            <span>NT$ 9,800</span>
+                        </div>
+                        <div class="remark">
+                            <span>限時優惠中</span>
+                            <a href="#" class="tag">#拍照攝影</a>
+                            <a href="#" class="tag">#YouTuber</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/discount2.png" alt="">
+                    <div class="course-info">
+                        <h3>資訊解構 x 視覺化設計 ｜ 即學即用的圖像資訊表達課</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>RE:LAB</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>4,979人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 7,565</span>
+                            <span>NT$ 8,900</span>
+                        </div>
+                        <div class="remark">
+                            <span>限時優惠中</span>
+                            <a href="#" class="tag">#資訊解構</a>
+                            <a href="#" class="tag">#設計</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/discount3.png" alt="">
+                    <div class="course-info">
+                        <h3>無痛居家整理學｜破除復亂困境，營造質感空間</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>Phyllis</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>4,419人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 5,150</span>
+                            <span>NT$ 9,800</span>
+                        </div>
+                        <div class="remark">
+                            <span>限時優惠中</span>
+                            <a href="#" class="tag">#整理術</a>
+                            <a href="#" class="tag">#斷捨離</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/discount4.png" alt="">
+                    <div class="course-info">
+                        <h3>培仁媽媽的暖心家常菜｜用簡單食材，煮出豐富的蔬食料理</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>培仁媽媽</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>1,547人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 10,200</span>
+                            <span>NT$ 9,800</span>
+                        </div>
+                        <div class="remark">
+                            <span>限時優惠中</span>
+                            <a href="#" class="tag">#烹飪料理</a>
+                            <a href="#" class="tag">#家常菜</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-aos="fade-up">
+                    <img src="image/discount5.png" alt="">
+                    <div class="course-info">
+                        <h3>超級數字力｜一生受用的財務思維課</h3>
+                        <div class="teacherandtime">
+                            <span class="teacher"><i class="fa-solid fa-user"></i>MJ 林明樟</span>
+                            <span class="leanrners"><i class="fa-solid fa-user-group"></i>22,566人學習</span>
+                        </div>
+                        <div class="money">
+                            <span>NT$ 13,430</span>
+                            <span>NT$ 15,800</span>
+                        </div>
+                        <div class="remark">
+                            <span>限時優惠中</span>
+                            <a href="#" class="tag">#理財</a>
+                            <a href="#" class="tag">#財務</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="next" onclick="slide(1, '限時優惠')"><i class="fa-solid fa-circle-right"></i></button>
+        </div>
+    </div>
+
+    <!-- 學員推薦 -->
+    <div class="review-section">
+        <div class="title">
+            <h1>學員推薦</h1>
+        </div>
+        <div class="title-decor"></div>
+        <div class="review-slider">
+            <button class="prev" onclick="slide(-1, '學員推薦')"><i class="fa-solid fa-circle-left"></i></button>
+            <div class="review-container" id="學員推薦">
+                <div class="review-card" data-aos="fade-up">
+                    <div class="review-header">
+                        <img src="image/person1.png" alt="Sol Tseng">
+                        <div class="review-meta">
+                            <h3>Sol Tseng</h3>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="review-info">
+                        <p>提供協商時不同的思維模式，受益良多，接下來會在日常生活及工作中反覆施行上課教過的策略去搭配複習，希望可以再協商方面更進一步。</p>
+                    </div>
+                    <p class="review-course">劉必榮的致勝談判思維課</p>
+                </div>
+                <div class="review-card" data-aos="fade-up">
+                    <div class="review-header">
+                        <img src="image/person2.png" alt="">
+                        <div class="review-meta">
+                            <h3>Milk1220</h3>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="review-info">
+                        <p>看老師的視頻，是一種享受，像是一個好友在分享著她的生活和喜悅，深受感染。我正在慢慢看，慢慢學習，慢慢轉變中，謝謝老師的分享。</p>
+                    </div>
+                    <p class="review-course">葉怡蘭的生活美學課</p>
+                </div>
+                <div class="review-card" data-aos="fade-up">
+                    <div class="review-header">
+                        <img src="image/person3.png" alt="">
+                        <div class="review-meta">
+                            <h3>Zero</h3>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="review-info">
+                        <p>非常有價值的人體生理及醫學知識，學員獲得很多疾病的根本問題的原理及自我照顧方式，傳播更多有價值的自然醫學知識，使學員學以致用並做為本身也從事自然療法相關的人。</p>
+                    </div>
+                    <p class="review-course">陳俊旭博士的自然醫學課</p>
+                </div>
+                <div class="review-card" data-aos="fade-up">
+                    <div class="review-header">
+                        <img src="image/person4.png" alt="">
+                        <div class="review-meta">
+                            <h3>Dan</h3>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="review-info">
+                        <p>有系統及方法訓練聽力 值得好好學習及練習。</p>
+                    </div>
+                    <p class="review-course">從聽懂關鍵字到完勝簡報</p>
+                </div>
+                <div class="review-card" data-aos="fade-up">
+                    <div class="review-header">
+                        <img src="image/person5.png" alt="">
+                        <div class="review-meta">
+                            <h3>Hey Ring</h3>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="review-info">
+                        <p>謝謝老師 我們是一家小企業，客戶殺價，先生總覺得10%沒什麼，雖然我有數字的敏感度，收入成本.....殺價就是淨利，但不解其中意義，課程圖解概念簡單清楚，一聽課程讓我欲罷不能，重複聽作筆記，知道什麼是好公司的和競爭力，讓我受益良多。</p>
+                    </div>
+                    <p class="review-course">一生受用的財務思維課</p>
+                </div>
+            </div>
+            <button class="next" onclick="slide(1, '學員推薦')"><i class="fa-solid fa-circle-right"></i></button>
+        </div>
+    </div>
+
+    <!-- 關於我們 -->
+    <div class="aboutus-section" data-aos="fade-up">
+        <div class="title">
+            <h1>關於我們</h1>
+        </div>
+        <div class="title-decor"></div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    SAT. 是英文「衛星」Satellite 的縮寫。<br>
+                    知識衛星 SAT. KNOWLEDGE，將知識傳播至世界每個角落，<br>是你最聰明的學習選擇。
+                </p>
+                <p>
+                    學習是一趟沒有終點的飛行，連上知識衛星，跨越時空和地域的限制，<br>
+                    直接向各領域的頂尖大師學習，探索知識並拓展更多元的興趣，<br>
+                    透過有感的學習，造就生活的改變，接近更理想的自己。
+                </p>
+                <p>
+                    知識衛星是精品線上課｜各領域大師開課首選<br>
+                    你最聰明的學習選擇<br>
+                    <em>Your smart learning choice</em>
+                </p>
+                <button class="learn-more-btn">了解更多</button>
+            </div>
+            <img src="image/aboutme.png" alt="">
+        </div>
+    </div>
+
+    <!-- footer -->
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">關於我們</a>
+                <a href="#">新聞媒體室</a>
+                <a href="#">常見問題</a>
+                <a href="#">使用條款</a>
+                <a href="#">聯絡我們</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-line"></i></a>
+                <p>© 知識衛星 SAT. KNOWLEDGE</p>
+            </div>
+            <p>本網站為緯育Tibame【第3期】UI/UX設計師養成班作品，僅供學習、展示之用途。</p>
+        </div>
+    </footer>
+
+    <!-- 尾端呼叫js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        AOS.init();
+      </script>
+      
+</body>
+</html>

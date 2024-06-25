@@ -1,0 +1,760 @@
+@import url(reset.css);
+
+body {
+    font-family: Arial, sans-serif, 微軟正黑體;
+    background-color: white;
+    line-height: 1.5;
+    color: #242424;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 確保所有連結都適用 */
+a{
+    text-decoration-line: none;
+    color: #242424;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+/* header nav左邊：logo、分類 */
+header img{
+    height: 35px;
+}
+
+
+.navleft {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    flex: 1;
+}
+
+.navleft i{
+    margin-left: 5px;
+}
+
+.navleft a {
+    margin: 0px 10px;
+}
+
+/* 分類 */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu a {
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-submenu a:hover {
+    background-color: #CEE0FF;
+}
+
+.dropdown-submenu-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-submenu:hover .dropdown-submenu-content {
+    display: block;
+}
+
+.dropdown-thirdmenu {
+    position: relative;
+}
+
+.dropdown-thirdmenu a {
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-thirdmenu a:hover {
+    background-color: #CEE0FF;
+}
+
+.dropdown-thirdmenu-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-thirdmenu:hover .dropdown-thirdmenu-content {
+    display: block;
+}
+
+.navleft > a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+/* header nav中間：搜尋bar */
+.searchbar {
+    flex-grow: 1;
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.searchbar input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    /* min-width: 100; */
+}
+
+.searchbar button {
+    width: 50px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar button i {
+    font-size: 16px;
+}
+
+.search-dropdown {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 10;
+}
+
+.search-section {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.search-section a {
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 5px;
+    transition: background-color 0.3s;
+}
+
+.search-section a:hover {
+    background-color: #CEE0FF;
+}
+.search-section a i {
+    margin-right: 5px;
+    color: #005CFF;
+}
+
+.trending-section .trending-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.trending-tags a {
+    background: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    color: #005CFF;
+    text-decoration: none;
+}
+
+.trending-tags a:hover {
+    background: #CEE0FF;
+}
+
+/* header nav右邊：購物車、會員中心 */
+.navright {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.cart{
+    padding: 5px 15px;
+}
+
+.cart:hover{
+    color: #005CFF;
+}
+
+.login, .register {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: 1px solid #868686;
+    background-color: white;
+    /* font-size: 16px; */
+    border-radius: 4px;
+}
+
+.register {
+    background-color: #242424;
+    color: white;
+}
+
+.login:hover{
+    border: 1px solid #005CFF;
+    color: #005CFF;
+}
+
+.register:hover {
+    background-color: #005CFF;
+}
+
+/* rwd用 */
+.hamburger-menu {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.mobile-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+/* kvimage carousel */
+.carousel {
+    width: 100%;
+    position: relative;
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.carousel-slide img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.carousel-indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #DEDEDE;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: #868686;
+}
+
+.course-section {
+    width: 100%;
+    padding: 50px 80px;
+    box-sizing: border-box;
+}
+
+/* 大標全部共用 */
+.title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.title-decor{
+    width: 40px;
+    height: 5px;
+    background-color: #005CFF;
+    margin-bottom: 30px;
+}
+
+.title h1{
+    font-size: 32px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.title h2{
+    font-size: 18px;
+    color: #868686;
+}
+
+/* 課程滑動區 */
+.course-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.course-container {
+    display: flex;
+    overflow: hidden;
+}
+
+/* 合購課程卡(沒有講師) */
+.course-card {
+    min-width: 300px;
+    margin: 0 15px;
+    border: 1px solid #F0F0F0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.course-card img {
+    width: 100%;
+    display: block;
+}
+
+.course-info {
+    padding: 15px;
+}
+
+.course-info h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 3em;
+    max-height: 3em;
+    overflow: hidden;
+    /* 最高僅顯示兩行高度 超出則隱藏 */
+}
+
+.teacherandtime {
+    font-size: 14px;
+    color: #868686;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.teacherandtime i {
+    margin-right: 10px;
+}
+
+.money {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.money span {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #FB574B;
+}
+
+.money span:first-child{
+    font-weight: bold;
+}
+.money span:nth-child(2) {
+    font-size: 12px;
+    color: #868686;
+    text-decoration-line: line-through;
+}
+
+.remark span{
+    display: inline-block;
+    background: #005CFF;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 3px;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.remark .tag{
+    display: inline-block;
+    border: 1px solid #005CFF;
+    color: #005CFF;
+    padding: 5px;
+    border-radius: 30px;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.remark-progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remark {
+    color: white;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-grow: 1;
+}
+
+.progress-bar {
+    width: 100%;
+    background: #F0F0F0;
+    height: 5px;
+    border-radius: 3px;
+    /* overflow: hidden; */
+}
+
+.progress {
+    height: 100%;
+    background: #005CFF;
+    border-radius: 3px;
+}
+
+.progress-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.progress-text, .progress-percentage{
+    font-size: 12px;
+    color: #868686;
+}
+
+.prev {
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.next {
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.prev:hover, .next:hover{
+    color: #005CFF;
+}
+
+
+/* 評價區塊 */
+.review-section {
+    width: 100%;
+    padding: 50px 80px;
+    box-sizing: border-box;
+}
+
+.review-section .title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.review-section .title h1{
+    font-size: 32px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.review-section .title-decor{
+    width: 40px;
+    height: 5px;
+    background-color: #005CFF;
+    margin-bottom: 30px;
+}
+
+.review-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.review-container {
+    display: flex;
+    overflow: hidden;
+}
+
+.review-card {
+    min-width: 300px;
+    margin: 0 15px;
+    border: 1px solid #F0F0F0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.review-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.review-meta h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.rating {
+    color: #FFD600;
+    margin-top: 5px;
+}
+
+.review-info {
+    padding: 0 15px 15px;
+    flex-grow: 1;
+}
+
+.review-info p {
+    margin: 5px 0;
+}
+
+.review-course {
+    font-weight: bold;
+    color: #868686;
+    padding: 15px;
+    text-align: left;
+}
+
+/* 關於我們 */
+.aboutus-section {
+    width: 100%;
+    padding: 50px 80px;
+    box-sizing: border-box;
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-text p{
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.about-text p:nth-child(3){
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.about-text em {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #005CFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.learn-more-btn:hover {
+    background-color: #014d9f;
+}
+
+.about-content img {
+    flex: 1;
+    max-width: 400px;
+    width: 100%;
+    margin-right: 50px;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+ {
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: #007BFF;
+}
+
+.footer-social p {
+    margin: 0;
+    font-size: 12px;
+}
